@@ -4,6 +4,14 @@ import { NavbarList } from './NavbarList';
 
 describe("NavbarList", () => {
   let container: any;
+  const linkLabels = [
+    { id: 1, label: "Homepage", link: "/" },
+    { id: 2, label: "Projects", link: "/projects" },
+    { id: 3, label: "Publications", link: "/publications" },
+    { id: 4, label: "Resume", link: "/resume" },
+    { id: 5, label: "About Me", link: "/about" }
+  ];
+
   beforeEach(() => {
     container = document.createElement("div");
     document.body.replaceChildren(container);
@@ -11,15 +19,26 @@ describe("NavbarList", () => {
 
   it("Renders a div as root element of list", () => {
     act(() => {
-      ReactDOM.createRoot(container).render(<NavbarList/>)
+      ReactDOM.createRoot(container).render(<NavbarList list={linkLabels} />)
     })
     expect(document.querySelector("div")).not.toBeNull();
   })
 
   it("Renders an ul element to display label list", () => {
     act(() => {
-      ReactDOM.createRoot(container).render(<NavbarList/>)
+      ReactDOM.createRoot(container).render(<NavbarList list={linkLabels} />)
     })
     expect(document.querySelector("ul")).not.toBeNull();
+  })
+
+  it("Renders li elements to display corresponding label", () => {
+    act(() => {
+      ReactDOM.createRoot(container).render(
+        <NavbarList list={linkLabels}/>
+      )
+    })
+  
+    const listChildren = document.querySelectorAll("ul > li");
+    expect(listChildren).toHaveLength(5);
   })
 });
