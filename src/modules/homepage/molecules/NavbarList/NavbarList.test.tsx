@@ -16,4 +16,10 @@ describe("NavbarList", () => {
     expect(document.querySelector("div")).not.toBeNull();
   })
 
+  it("Renders an ul element to display label list", () => {
+    act(() => {
+      ReactDOM.createRoot(container).render(<NavbarList/>)
+    })
+    expect(document.querySelector("ul")).not.toBeNull();
+  })
 });

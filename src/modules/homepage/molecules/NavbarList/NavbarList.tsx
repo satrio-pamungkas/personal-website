@@ -1,5 +1,7 @@
 export const NavbarList = () => {
   return (
-    <div></div>
+    <div>
+      <ul></ul>
+    </div>
   );
 }
