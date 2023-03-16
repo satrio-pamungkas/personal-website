@@ -41,4 +41,15 @@ describe("NavbarList", () => {
     const listChildren = document.querySelectorAll("ul > li");
     expect(listChildren).toHaveLength(5);
   })
+
+  it("Renders the name of label and link correctly", () => {
+    act(() => {
+      ReactDOM.createRoot(container).render(
+        <NavbarList list={linkLabels} />
+      )
+    })
+
+    const listChildren = document.querySelectorAll("li");
+    expect(listChildren[0].textContent).toEqual(linkLabels[0].label)
+  })
 });

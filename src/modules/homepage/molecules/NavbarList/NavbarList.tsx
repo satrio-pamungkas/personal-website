@@ -1,3 +1,5 @@
+import { NavbarLink } from "../../atoms/NavbarLink/NavbarLink";
+
 interface IList {
   id: number,
   label: string,
@@ -13,7 +15,9 @@ export const NavbarList = (props: INavbarList) => {
     <div>
       <ul>
         {props.list.map((item) => (
-          <li key={item.id}></li>
+          <li key={item.id}>
+            <NavbarLink label={item.label} />
+          </li>
         ))}
       </ul>
     </div>
