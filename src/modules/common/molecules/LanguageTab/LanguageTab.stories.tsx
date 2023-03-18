@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import { LanguageTab } from './LanguageTab';
 
 export default {
-  title: 'Homepage/Atoms/LanguageTab',
+  title: 'Common/Atoms/LanguageTab',
   component: LanguageTab,
   argTypes: { onClick: { action: "clicked" } }
 };
