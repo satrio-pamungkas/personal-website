@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </nav>
 
-        <h1 className="text-3xl font-bold underline text-blue-900">Hello World !</h1>
+        <h1 className="text-3xl font-barlow font-bold underline text-blue-900">Hello World !</h1>
 
         <button
           data-tooltip-target="tooltip-default"
