@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import { NavbarLink } from "./NavbarLink";
 
 export default {
-  title: 'Homepage/Atoms/NavbarLink',
+  title: 'Common/Atoms/NavbarLink',
   component: NavbarLink
 };
 
