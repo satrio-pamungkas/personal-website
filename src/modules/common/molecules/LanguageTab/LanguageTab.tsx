@@ -9,12 +9,15 @@ export const LanguageTab = () => {
   }
 
   return (
-    <div data-testid="language-tab">
+    <div className="flex flex-row" data-testid="language-tab">
       <LanguageLink 
         active={status} 
         label="ID" 
         onClick={updateStatus} 
       />
+      &nbsp;
+      /
+      &nbsp;
       <LanguageLink 
         active={!status} 
         label="EN" 
