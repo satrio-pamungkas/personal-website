@@ -14,7 +14,7 @@ export const LanguageLink = (props: ILanguageLink) => {
       <div 
         onClick={sendLabel} 
         data-testid="language-link" 
-        className="font-bold"
+        className="font-bold font-barlow cursor-pointer text-white"
       >
           {props.label}
       </div>
@@ -24,7 +24,7 @@ export const LanguageLink = (props: ILanguageLink) => {
       <div 
         onClick={sendLabel} 
         data-testid="language-link" 
-        className="font-regular"
+        className="font-regular font-barlow cursor-pointer text-white"
       >
         {props.label}
       </div>
