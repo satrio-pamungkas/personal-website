@@ -12,8 +12,11 @@ interface INavbarList {
 
 export const NavbarList = (props: INavbarList) => {
   return (
-    <div>
-      <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <div className="items-center justify-between ">
+      <ul className="flex flex-col p-3 m-3 border md:flex-row text-sm
+        rounded-xl border-gray-500 bg-neutral-800 md:space-x-8 md:text-sm 
+        md:font-medium md:border-0 md:bg-neutral-900"
+      >
         {props.list.map((item) => (
           <li key={item.id}>
             <NavbarLink label={item.label} />
