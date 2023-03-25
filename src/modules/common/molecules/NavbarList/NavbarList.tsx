@@ -4,6 +4,7 @@ interface IList {
   id: number,
   label: string,
   link: string
+  active: boolean
 }
 
 interface INavbarList {
@@ -19,7 +20,7 @@ export const NavbarList = (props: INavbarList) => {
       >
         {props.list.map((item) => (
           <li key={item.id}>
-            <NavbarLink label={item.label} />
+            <NavbarLink label={item.label} active={item.active} />
           </li>
         ))}
       </ul>
