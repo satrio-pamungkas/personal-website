@@ -6,6 +6,12 @@ export default {
   component: NavbarLink
 };
 
-export const Primary: ComponentStory<typeof NavbarLink> = () => { 
-  return (<NavbarLink label="Homepage"/>)
+const Template: ComponentStory<typeof NavbarLink> = (args) => {
+  return (<NavbarLink {...args} />)
 }
+
+export const Primary = Template.bind({});
+Primary.args = { label: "Homepage", active: true }
+
+export const Secondary = Template.bind({});
+Secondary.args = { label: "Homepage", active: false }
