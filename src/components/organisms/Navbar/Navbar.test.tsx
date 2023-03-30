@@ -1,6 +1,27 @@
 import ReactDOM from 'react-dom/client';
 import { act, screen } from '@testing-library/react';
 import { Navbar } from './Navbar';
+import React from 'react';
+
+const linkLabels = [
+  { id: 1, label: "Homepage", link: "/", active: false },
+  { id: 2, label: "Projects", link: "/projects", active: false },
+  { id: 3, label: "Publications", link: "/publications", active: false },
+  { id: 4, label: "Resume", link: "/resume", active: false },
+  { id: 5, label: "About Me", link: "/about", active: false }
+];
+
+jest.mock('next/router', () => ({
+  useRouter: () => {
+    return {
+      route: '',
+      pathname: 'beranda'
+    }
+  },
+  useState: jest.fn()
+}))
+
+const useStateSpy = jest.spyOn(React, 'useState');
 
 describe("Navbar", () => {
   let container: any;
@@ -8,6 +29,11 @@ describe("Navbar", () => {
   beforeEach(() => {
     container = document.createElement("nav");
     document.body.replaceChildren(container);
+    useStateSpy.mockReturnValue([linkLabels, jest.fn()]);
+  })
+
+  afterEach(() => {
+    useStateSpy.mockRestore();
   })
 
   it("Renders nav as root element", () => {

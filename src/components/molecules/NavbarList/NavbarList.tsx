@@ -20,7 +20,7 @@ export const NavbarList = (props: INavbarList) => {
       >
         {props.list.map((item) => (
           <li key={item.id}>
-            <NavbarLink label={item.label} active={item.active} />
+            <NavbarLink label={item.label} active={item.active} link={item.link} />
           </li>
         ))}
       </ul>

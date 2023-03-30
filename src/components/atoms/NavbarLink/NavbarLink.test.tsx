@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client';
 import { screen } from '@testing-library/react';
 
 describe("NavbarLink", () => { 
-  const label = "Homepage";
+  const label = "Projects";
+  const link = "/projects"
   let container: any;
 
   beforeEach(() => {
@@ -15,7 +16,7 @@ describe("NavbarLink", () => {
   it("Renders with label name correctly", () => {
     act(() => {
       ReactDOM.createRoot(container).render(
-        <NavbarLink label={label} active={true} />
+        <NavbarLink label={label} active={true} link={link} />
       );
     })
     
@@ -25,7 +26,7 @@ describe("NavbarLink", () => {
   it("Renders active component label correctly", () => {
     act(() => {
       ReactDOM.createRoot(container).render(
-        <NavbarLink label={label} active={true} />
+        <NavbarLink label={label} active={true} link={link} />
       );
     })
     const ahrefComponent = screen.getByTestId("link");
@@ -36,7 +37,7 @@ describe("NavbarLink", () => {
   it("Renders inactive component label correctly", () => {
     act(() => {
       ReactDOM.createRoot(container).render(
-        <NavbarLink label={label} active={false} />
+        <NavbarLink label={label} active={false} link={link} />
       );
     })
     const ahrefComponent = screen.getByTestId("link");

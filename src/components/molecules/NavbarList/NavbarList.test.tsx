@@ -1,15 +1,15 @@
 import ReactDOM from 'react-dom/client';
-import renderer, { act } from 'react-test-renderer';
+import { act } from 'react-test-renderer';
 import { NavbarList } from './NavbarList';
 
 describe("NavbarList", () => {
   let container: any;
   const linkLabels = [
-    { id: 1, label: "Homepage", link: "/" },
-    { id: 2, label: "Projects", link: "/projects" },
-    { id: 3, label: "Publications", link: "/publications" },
-    { id: 4, label: "Resume", link: "/resume" },
-    { id: 5, label: "About Me", link: "/about" }
+    { id: 1, label: "Homepage", link: "/", active: false },
+    { id: 2, label: "Projects", link: "/projects", active: false },
+    { id: 3, label: "Publications", link: "/publications", active: false },
+    { id: 4, label: "Resume", link: "/resume", active: false },
+    { id: 5, label: "About Me", link: "/about", active: false }
   ];
 
   beforeEach(() => {
