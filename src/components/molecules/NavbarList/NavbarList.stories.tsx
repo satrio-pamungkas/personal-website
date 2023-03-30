@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import { NavbarList } from './NavbarList';
 
 export default {
-  title: 'Common/Molecules/NavbarList',
+  title: 'Molecules/NavbarList',
   component: NavbarList
 };
 

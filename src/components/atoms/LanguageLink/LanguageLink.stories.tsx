@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import { LanguageLink } from "./LanguageLink";
 
 export default {
-  title: 'Common/Atoms/LanguageLink',
+  title: 'Atoms/LanguageLink',
   component: LanguageLink,
   argTypes: { onClick: { action: "clicked" } }
 };

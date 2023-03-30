@@ -2,7 +2,7 @@ import { ComponentStory } from '@storybook/react';
 import { Title } from './Title';
 
 export default {
-  title: 'Homepage/Atoms/Title',
+  title: 'Atoms/Title',
   component: Title
 };
 
@@ -14,5 +14,7 @@ export const Primary = Template.bind({});
 Primary.args = { 
   bold: true, 
   children: "Hello World", 
-  textColor: 'black' 
+  textColor: 'black',
+  textAlign: 'left',
+  textSize: '2xl' 
 }
