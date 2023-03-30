@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Navbar } from "@/modules/common/organisms/Navbar/Navbar";
+import { Navbar } from "@/components/organisms/Navbar/Navbar";
 
 export default function Home() {
   return (
