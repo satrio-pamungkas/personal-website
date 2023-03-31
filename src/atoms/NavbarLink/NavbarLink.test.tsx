@@ -2,6 +2,7 @@ import { act } from 'react-test-renderer';
 import { NavbarLink } from './NavbarLink';
 import ReactDOM from 'react-dom/client';
 import { screen } from '@testing-library/react';
+import { styleRender } from '../../utils/test.config';
 
 describe("NavbarLink", () => { 
   const label = "Projects";
@@ -25,23 +26,25 @@ describe("NavbarLink", () => {
 
   it("Renders active component label correctly", () => {
     act(() => {
-      ReactDOM.createRoot(container).render(
+      styleRender(
         <NavbarLink label={label} active={true} link={link} />
       );
     })
     const ahrefComponent = screen.getByTestId("link");
 
     expect(ahrefComponent).toHaveClass("font-bold");
+    expect(ahrefComponent).toHaveStyle("font-weight: 700");
   })
 
   it("Renders inactive component label correctly", () => {
     act(() => {
-      ReactDOM.createRoot(container).render(
+      styleRender(
         <NavbarLink label={label} active={false} link={link} />
       );
     })
     const ahrefComponent = screen.getByTestId("link");
 
-    expect(ahrefComponent).toHaveClass("font-regular");
+    expect(ahrefComponent).toHaveClass("font-normal");
+    expect(ahrefComponent).toHaveStyle("font-weight: 400");
   })
 });
