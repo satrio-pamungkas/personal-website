@@ -1,6 +1,9 @@
 import Head from "next/head";
 
+import { Text } from "@/atoms/Text/Text";
 import { Navbar } from "@/organisms/Navbar/Navbar";
+import { Button } from "@/atoms/Button/Button";
+import { Bs0Circle } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -52,6 +55,16 @@ export default function Home() {
           <div>
             <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
           </div>
+        </div>
+        <Text fontColor="red-900">TEST</Text>
+        <div className="w-1/6">
+          <Button
+            icon={<Bs0Circle/>} 
+            styleColor="primary"
+            size="normal"
+          >
+            {"Want to Reach me ?"}
+          </Button>
         </div>
       </main>
     </>
