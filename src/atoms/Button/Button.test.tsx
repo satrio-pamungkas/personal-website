@@ -3,11 +3,12 @@ import { act, screen, cleanup } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import { Button } from "./Button";
 import { BsFill0CircleFill } from "react-icons/bs";
+import { themes } from "./Button.util";
 
 describe("Button", () => {
   let container: any;
   const placeholder = "placeholder";
-  const color = "blue-800"
+  const color = "primary"
   const click = jest.fn();
 
   beforeEach(() => {
@@ -39,14 +40,13 @@ describe("Button", () => {
     expect(component).toHaveTextContent(placeholder);
   })
 
-  it("Renders button with dynamic background color", () => {
+  it("Renders button with dynamic style color", () => {
     act(() => {styleRender(
-      <Button color={color}>{placeholder}</Button>)
+      <Button styleColor={color}>{placeholder}</Button>)
     });
     const component = screen.getByTestId("button");
 
-    expect(component).toHaveClass(`bg-${color}`);
-    // expect(component).toHaveStyle("background-color: transparent");
+    expect(component).toHaveClass(themes.primary);
   })
 
   it("Renders button with dynamic icon", () => {

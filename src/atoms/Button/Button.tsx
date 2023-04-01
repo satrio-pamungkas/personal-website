@@ -1,35 +1,37 @@
 import React from "react"
-import { ReactNode } from "react"
+import { IButton } from ".";
+import { sizes, themes } from "./Button.util";
 
-interface IButton {
-  children?: string
-  icon?: ReactNode
-  color?: string
-  onClick?: () => void
-}
+type ObjectKeyStyle = keyof typeof themes;
+type ObjectKeySize = keyof typeof sizes;
 
 export const Button = ({
   children = "",
-  color = "blue-800",
+  styleColor = "primary",
+  size = "normal",
   icon,
   onClick
 }: IButton) => {
+
   return (
     <button 
-      className={`font-oswald font-normal uppercase px-4 py-2 ` +
-      `text-white ` + `bg-${color}`}
+      className={`font-oswald font-normal uppercase px-4 py-3 ` +
+        `text-white w-full ` + 
+        `${themes[styleColor as ObjectKeyStyle]} ` +
+        `${sizes[size as ObjectKeySize]}`}
       data-testid="button"
       type="button"
       onClick={onClick}
     >
-      <span>
-        <React.Fragment>
+      <div className="flex flex-row justify-center items-center
+        space-x-2">
+        <div>
           {icon}
-        </React.Fragment>
-        <React.Fragment>
+        </div>
+        <div>
           {children}
-        </React.Fragment>
-      </span>
+        </div>
+      </div>
     </button>
   )
 }
