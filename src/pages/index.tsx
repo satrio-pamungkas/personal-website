@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import { Text } from "@/atoms/Text/Text";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
             <span className="font-medium">Info alert!</span> Change a few things up and try submitting again.
           </div>
         </div>
+        <Text fontColor="blue-900">TEST</Text>
       </main>
     </>
   );
