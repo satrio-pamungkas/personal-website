@@ -2,7 +2,7 @@ import { act } from 'react-test-renderer';
 import { NavbarLink } from './NavbarLink';
 import ReactDOM from 'react-dom/client';
 import { screen } from '@testing-library/react';
-import { styleRender } from '../../utils/test.config';
+import { styleRender } from '../../configs/test.config';
 
 describe("NavbarLink", () => { 
   const label = "Projects";

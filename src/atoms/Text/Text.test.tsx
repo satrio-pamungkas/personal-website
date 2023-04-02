@@ -1,4 +1,4 @@
-import { styleRender } from "../../utils/test.config";
+import { styleRender } from "../../configs/test.config";
 import { act, screen } from "@testing-library/react";
 import { Text } from "./Text";
 

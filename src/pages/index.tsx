@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import { Text } from "@/atoms/Text/Text";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Button } from "@/atoms/Button/Button";
