@@ -6,7 +6,7 @@
     "allowJs": true,
     // You have to switch skipLibCheck toggle into true
     // Do it everytime push to production or build 
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
