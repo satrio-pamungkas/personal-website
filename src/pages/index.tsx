@@ -59,7 +59,7 @@ export default function Home() {
         <Text fontColor="red-900">TEST</Text>
         <SubTitle 
           fontWeight="bold" 
-          fontColor="text-green-500"
+          fontColor="text-red-500"
           fontSize="2xl"
         >Test Test Halo</SubTitle>
         <div className="w-1/6">

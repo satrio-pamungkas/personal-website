@@ -6,7 +6,7 @@ describe("SubTitle", () => {
   let container: any;
   const placeholder = "placeholder";
   const weight = "bold";
-  const color = "white";
+  const color = "text-white";
   const align = "center";
   const size = "lg";
 
@@ -54,7 +54,7 @@ describe("SubTitle", () => {
     )})
     const component = screen.getByTestId("subtitle");
 
-    expect(component).toHaveClass(`text-${color}`);
+    expect(component).toHaveClass(color);
   })
 
   it("Renders text align correctly", () => {
