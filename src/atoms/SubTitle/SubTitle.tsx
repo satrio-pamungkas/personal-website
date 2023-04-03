@@ -10,9 +10,6 @@ const util = {
   weight: (value: string) => {
     return `font-${value}`;
   },
-  color: (value: string) => {
-    return `text-${value}`;
-  },
   align: (value: string) => {
     return `text-${value}`;
   },
