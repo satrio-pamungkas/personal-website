@@ -4,6 +4,8 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    // You have to switch skipLibCheck toggle into true
+    // Do it everytime push to production or build 
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,

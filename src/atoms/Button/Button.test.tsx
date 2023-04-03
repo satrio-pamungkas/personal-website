@@ -1,4 +1,4 @@
-import { styleRender } from "../../utils/test.config";
+import { styleRender } from "../../configs/test.config";
 import { act, screen, cleanup } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import { Button } from "./Button";

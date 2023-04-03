@@ -1,9 +1,9 @@
 import Head from "next/head";
-
 import { Text } from "@/atoms/Text/Text";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Button } from "@/atoms/Button/Button";
 import { Bs0Circle } from "react-icons/bs";
+import { SubTitle } from "@/atoms/SubTitle/SubTitle";
 
 export default function Home() {
   return (
@@ -57,6 +57,11 @@ export default function Home() {
           </div>
         </div>
         <Text fontColor="red-900">TEST</Text>
+        <SubTitle 
+          fontWeight="bold" 
+          fontColor="text-red-500"
+          fontSize="2xl"
+        >Test Test Halo</SubTitle>
         <div className="w-1/6">
           <Button
             icon={<Bs0Circle/>} 
