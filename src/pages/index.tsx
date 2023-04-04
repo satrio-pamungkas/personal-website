@@ -4,6 +4,7 @@ import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Button } from "@/atoms/Button/Button";
 import { Bs0Circle } from "react-icons/bs";
 import { SubTitle } from "@/atoms/SubTitle/SubTitle";
+import { HeaderTitle } from "@/molecules/HeaderTitle/HeaderTitle";
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
             {"Want to Reach me ?"}
           </Button>
         </div>
+        <HeaderTitle/>
       </main>
     </>
   );

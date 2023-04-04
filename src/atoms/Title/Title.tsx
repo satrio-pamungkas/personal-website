@@ -6,7 +6,7 @@ interface Title {
   bold: boolean
 }
 
-const listSize = ['xs','sm','md','lg','xl','2xl','3xl','4xl'];
+const listSize = ['xs','sm','md','lg','xl','2xl','3xl','4xl','5xl','6xl','7xl','8xl'];
 
 const findResponsive = (list: string[], value?: string) => {
   let index: number = 0;
