@@ -12,9 +12,9 @@ const Template: ComponentStory<typeof Title> = (args) => {
 
 export const Primary = Template.bind({});
 Primary.args = { 
-  bold: true, 
-  children: "Hello World", 
-  textColor: 'black',
-  textAlign: 'left',
-  textSize: '2xl' 
+  children: "Hello World",
+  textAlign: "text-left",
+  textColor: "text-black",
+  textSize: "text-8xl",
+  textWeight: "font-bold"
 }
