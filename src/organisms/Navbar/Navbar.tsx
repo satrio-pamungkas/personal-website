@@ -38,7 +38,7 @@ export const Navbar = () => {
   }, [])
   
   return (
-    <nav className="bg-neutral-900 px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-neutral-900 px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
       <div data-testid="navbar-div" className="container flex flex-wrap items-center justify-between mx-auto">
         <div className="flex items-center">
           <h1 className="font-oswald text-2xl text-white"><b>MR</b>SPP</h1>

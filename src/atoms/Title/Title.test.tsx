@@ -1,10 +1,14 @@
 import { Title } from "./Title";
-import ReactDOM from "react-dom/client";
 import { act, screen } from "@testing-library/react";
+import { styleRender } from "../../configs/test.config";
 
 describe("Title", () => {
   let container: any;
   const text = "placeholder";
+  const textWeight = "font-bold";
+  const textColor = "text-black";
+  const textSize = "text-2xl md:text-4xl";
+  const textAlign = "text-left"
 
   beforeEach(() => {
     container = document.createElement("h1");
@@ -13,30 +17,27 @@ describe("Title", () => {
 
   it("Renders h1 as root element", () => {
     act(() => {
-      ReactDOM.createRoot(container).render(<Title bold={false}/>);
+      styleRender(<Title textWeight={textWeight}/>);
     })
 
     expect(document.querySelector("h1")).not.toBeNull();
   })
 
   it("Renders text correctly", () => {
-    const text = "Hello World";
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={false}>{text}</Title>
-      );
+      styleRender(
+        <Title textWeight={textWeight}>{text}</Title>);
     })
 
-    const component = document.querySelector("h1");
+    const component = screen.getByTestId("hero-title");
 
     expect(component).toHaveTextContent(text);
   })
 
   it("Renders bold font correctly", () => {
-    const bold = "This text is bold";
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={true}>{bold}</Title>
+      styleRender(
+        <Title textWeight={textWeight}>{text}</Title>
       );
     })
 
@@ -46,10 +47,9 @@ describe("Title", () => {
   })
 
   it("Renders normal font correctly", () => {
-    const normal = "This text is normal";
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={false}>{normal}</Title>
+      styleRender(
+        <Title textWeight={"font-normal"}>{text}</Title>
       );
     })
 
@@ -59,10 +59,9 @@ describe("Title", () => {
   })
 
   it("Renders dynamic text color correctly", () => {
-    const color = "white"
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={false} textColor={color}>
+      styleRender(
+        <Title textWeight={textWeight} textColor={textColor}>
           {text}
         </Title>
       );
@@ -70,14 +69,17 @@ describe("Title", () => {
 
     const component = screen.getByTestId("hero-title");
 
-    expect(component).toHaveClass(`text-${color}`);
+    expect(component).toHaveClass(textColor);
   })
 
   it("Renders dynamic text size correctly", () => {
-    const size = "3xl"
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={false} textColor="white" textSize={size}>
+      styleRender(
+        <Title 
+          textWeight={textWeight} 
+          textColor={textColor} 
+          textSize={textSize}
+        >
           {text}
         </Title>
       );
@@ -85,15 +87,16 @@ describe("Title", () => {
 
     const component = screen.getByTestId("hero-title");
 
-    expect(component).toHaveClass(`md:text-${size}`);
-    expect(component).toHaveClass(`text-xl`);
+    expect(component).toHaveClass(textSize);
   })
 
   it("Renders dynamic text align correctly", () => {
-    const align = "left";
     act(() => {
-      ReactDOM.createRoot(container).render(
-        <Title bold={false} textColor="white" textAlign={align}>
+      styleRender(
+        <Title 
+          textWeight={textWeight} 
+          textColor={textColor} 
+          textAlign={textAlign}>
           {text}
         </Title>
       );
@@ -101,6 +104,6 @@ describe("Title", () => {
 
     const component = screen.getByTestId("hero-title");
 
-    expect(component).toHaveClass(`text-${align}`);
+    expect(component).toHaveClass(textAlign);
   })
 })

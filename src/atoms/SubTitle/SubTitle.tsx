@@ -1,21 +1,18 @@
-import { util } from "./SubTitle.util"
 import { ISubTitle } from "."
 
 export const SubTitle = ({
   children = "",
-  fontWeight = "normal",
-  fontColor = "",
-  textAlign = "left",
-  fontSize = "lg"
+  textWeight = "font-normal",
+  textColor = "text-black",
+  textAlign = "text-left",
+  textSize = "text-2xl"
 }: ISubTitle) => {
 
   return (
     <h3 
       className={`font-source-code ` +
-        `${util.weight(fontWeight)} ` +
-        `${fontColor} ` +
-        `${util.align(textAlign)} ` +
-        `${util.size(fontSize)}`}
+      `${textWeight} ` + `${textColor} ` +
+      `${textAlign} ` + `${textSize}`}
       data-testid="subtitle">
       {children}
     </h3>
