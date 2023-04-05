@@ -27,10 +27,12 @@ describe("HeaderSubTitle", () => {
   it("Renders child elements correctly", () => {
     act(() => {styleRender(<HeaderSubTitle/>)})
     const component = screen.getByTestId("header-sub-title");
-    const subtitle = screen.getByTestId("subtitle");
+    const subtitle = screen.getAllByTestId("subtitle");
     const text = screen.getByTestId("text");
 
-    expect(component).toContainElement(subtitle);
-    expect(component).toContainElement(text);
+    subtitle.forEach(element => {
+      expect(component).toContainElement(element);
+    });
+    expect(component).toContainElement(text)
   })
 })

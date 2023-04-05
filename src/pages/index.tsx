@@ -3,8 +3,8 @@ import { Text } from "@/atoms/Text/Text";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Button } from "@/atoms/Button/Button";
 import { Bs0Circle } from "react-icons/bs";
-import { SubTitle } from "@/atoms/SubTitle/SubTitle";
 import { HeaderTitle } from "@/molecules/HeaderTitle/HeaderTitle";
+import { HeaderSubTitle } from "@/molecules/HeaderSubTitle/HeaderSubTitle";
 
 export default function Home() {
   return (
@@ -35,12 +35,7 @@ export default function Home() {
           Tooltip content
           <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <Text fontColor="red-900">TEST</Text>
-        <SubTitle 
-          fontWeight="bold" 
-          fontColor="text-red-500"
-          fontSize="2xl"
-        >Test Test Halo</SubTitle>
+        <Text textColor="text-red-900">TEST</Text>
         <div className="w-1/6">
           <Button
             icon={<Bs0Circle/>} 
@@ -51,6 +46,7 @@ export default function Home() {
           </Button>
         </div>
         <HeaderTitle/>
+        <HeaderSubTitle/>
       </main>
     </>
   );

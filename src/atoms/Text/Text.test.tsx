@@ -5,10 +5,10 @@ import { Text } from "./Text";
 describe("Text", () => {
   let container: any;
   const placeholder = "This is placeholder";
-  const weight = "bold";
-  const color = "black";
-  const align = "center";
-  const size = "sm";
+  const weight = "font-bold";
+  const color = "text-black";
+  const align = "text-center";
+  const size = "text-sm";
 
   beforeEach(() => {
     container = document.createElement("p");
@@ -26,7 +26,7 @@ describe("Text", () => {
 
   it("Renders text correctly", () => {
     act(() => {styleRender(
-      <Text fontWeight={weight}>{placeholder}</Text>
+      <Text textWeight={weight}>{placeholder}</Text>
     )});
     const component = screen.getByTestId("text");
 
@@ -35,7 +35,7 @@ describe("Text", () => {
 
   it("Renders dynamic font weight correctly", () => {
     act(() => {styleRender(
-      <Text fontWeight={weight}>{placeholder}</Text>
+      <Text textWeight={weight}>{placeholder}</Text>
     )});
     const component = screen.getByTestId("text");
 
@@ -45,11 +45,11 @@ describe("Text", () => {
 
   it("Renders dynamic font color correctly", () => {
     act(() => {styleRender(
-      <Text fontColor={color}>{placeholder}</Text>
+      <Text textColor={color}>{placeholder}</Text>
     )});
     const component = screen.getByTestId("text");
 
-    expect(component).toHaveClass(`text-${color}`);
+    expect(component).toHaveClass(color);
   })
 
   it("Renders dynamic text align correctly", () => {
@@ -58,17 +58,17 @@ describe("Text", () => {
     )});
     const component = screen.getByTestId("text");
 
-    expect(component).toHaveClass(`text-${align}`);
-    expect(component).toHaveStyle(`text-align: ${align}`);
+    expect(component).toHaveClass(align);
+    expect(component).toHaveStyle("text-align: center");
   })
 
   it("Renders dynamic font size correctly", () => {
     act(() => {styleRender(
-      <Text fontSize={size}>{placeholder}</Text>
+      <Text textSize={size}>{placeholder}</Text>
     )});
     const component = screen.getByTestId("text");
 
-    expect(component).toHaveClass(`text-${size}`);
+    expect(component).toHaveClass(size);
     expect(component).toHaveStyle("font-size: 0.875rem")
   })
 })
