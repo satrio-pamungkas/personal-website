@@ -8,7 +8,7 @@ export const HeaderTitle = () => {
         textSize="text-4xl md:text-7xl" 
         textWeight="font-normal"
       >
-        Hello I'm
+        Hello I&lsquo;m
       </Title>
       <Title 
         textColor="text-white" 
