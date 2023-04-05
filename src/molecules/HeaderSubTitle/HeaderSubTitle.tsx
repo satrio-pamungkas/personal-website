@@ -4,7 +4,7 @@ import { Text } from "../../atoms/Text/Text";
 export const HeaderSubTitle = () => {
   return (
     <div data-testid="header-sub-title">
-      <div className="flex flex-row text-white space-x-6">
+      <div className="flex flex-row text-white space-x-2 md:space-x-6">
         <SubTitle 
           textColor="text-white"
           textSize="text-lg md:text-3xl" 
