@@ -1,27 +1,11 @@
 import { Title } from "../../atoms/Title/Title";
 import { Text } from "../../atoms/Text/Text";
 import { Button } from "../../atoms/Button/Button";
-import { useState, useEffect } from "react";
 import { FiDownload } from "react-icons/fi";
+import { useWidthSize } from "@/hooks/useWidthSize";
 
 export const CtaDownload = () => {
-  const [size, setSize] = useState<string>("large");
-
-  const handleResize = () => {
-    if (window.innerWidth < 576) {
-      setSize("normal");
-    } else {
-      setSize("large");
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    }
-  })
+  const [size] = useWidthSize("large");
 
   return (
     <section className="container mx-auto" data-testid="cta-download">
@@ -35,7 +19,7 @@ export const CtaDownload = () => {
             textSize="text-2xl md:text-4xl"
             textWeight="font-bold"
           >
-            Want to know about me on a formal way ?
+            Want to know more about me in a formal way?
           </Title>
           <div>
             <Text
@@ -43,7 +27,7 @@ export const CtaDownload = () => {
               textColor="text-white"
               textSize="text-md md:text-xl"
             >
-              If you are recruiter or want to know about me in professional way. I would like to recommend you to download my resume and portfolio file
+              If you are a recruiter or would like to know more about me in a professional way, I recommend downloading my resume and portfolio files.
             </Text>
           </div>
           <div className="flex flex-col md:flex-row 
