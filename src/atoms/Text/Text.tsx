@@ -1,24 +1,18 @@
-interface IText {
-  children?: string
-  fontWeight?: string
-  fontColor?: string
-  fontSize?: string
-  textAlign?: string 
-}
+import { IText } from ".";
 
 export const Text = ({
-  fontWeight = "normal",
-  fontColor = "black",
-  fontSize = "sm",
-  textAlign = "left",
+  textWeight = "font-normal",
+  textColor = "text-black",
+  textSize = "text-sm",
+  textAlign = "text-left",
   children = ""
 }: IText) => {
 
   return (
     <p 
-      className={`font-barlow ` + `font-${fontWeight} ` + 
-      `text-${fontColor} ` + `text-${textAlign} ` +
-      `text-${fontSize}`}
+      className={`font-barlow ` + 
+      `${textWeight} ` + `${textColor} ` +
+      `${textAlign} ` + `${textSize}`}
       data-testid="text"
     >
       {children}
