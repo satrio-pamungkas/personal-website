@@ -5,10 +5,10 @@ import { SubTitle } from "./SubTitle";
 describe("SubTitle", () => {
   let container: any;
   const placeholder = "placeholder";
-  const weight = "bold";
+  const weight = "font-bold";
   const color = "text-white";
-  const align = "center";
-  const size = "lg";
+  const align = "text-center";
+  const size = "text-lg";
 
   beforeEach(() => {
     container = document.createElement("h2");
@@ -40,7 +40,7 @@ describe("SubTitle", () => {
 
   it("Renders dynamic font weight correctly", () => {
     act(() => {styleRender(
-      <SubTitle fontWeight={weight}>{placeholder}</SubTitle>
+      <SubTitle textWeight={weight}>{placeholder}</SubTitle>
     )});
     const component = screen.getByTestId("subtitle");
 
@@ -50,7 +50,7 @@ describe("SubTitle", () => {
 
   it("Renders dynamic font color correctly", () => {
     act(() => {styleRender(
-      <SubTitle fontColor={color}>{placeholder}</SubTitle>
+      <SubTitle textColor={color}>{placeholder}</SubTitle>
     )})
     const component = screen.getByTestId("subtitle");
 
@@ -63,17 +63,17 @@ describe("SubTitle", () => {
     )})
     const component = screen.getByTestId("subtitle");
 
-    expect(component).toHaveClass(`text-${align}`);
-    expect(component).toHaveStyle(`text-align: ${align}`);
+    expect(component).toHaveClass(align);
+    expect(component).toHaveStyle("text-align: center");
   })
 
   it("Renders dynamic font size correctly", () => {
     act(() => {styleRender(
-      <SubTitle fontSize={size}>{placeholder}</SubTitle>
+      <SubTitle textSize={size}>{placeholder}</SubTitle>
     )})
     const component = screen.getByTestId("subtitle");
 
-    expect(component).toHaveClass(`text-md md:text-${size}`);
-    expect(component).toHaveStyle("font-size: 1.17em");
+    expect(component).toHaveClass(size);
+    expect(component).toHaveStyle("font-size: 1.125rem");
   })
 })
