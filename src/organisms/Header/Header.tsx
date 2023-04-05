@@ -7,7 +7,7 @@ import Illustration from "../../../public/header-illustration.png";
 export const Header = () => {
   return (
     <section 
-      className="container mx-auto py-16 md:py-32 mt-8" 
+      className="container mx-auto pb-8 pt-16 md:pb-32 md:pt-32 mt-8" 
       data-testid="header"
     >
       <div className="flex flex-col md:flex-row md:space-x-4 justify-center">
