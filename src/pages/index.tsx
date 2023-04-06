@@ -4,6 +4,7 @@ import { Header } from "@/organisms/Header/Header";
 import { CtaDownload } from "@/organisms/CtaDownload/CtaDownload";
 import { PersonalSummary } from "@/organisms/PersonalSummary/PersonalSummary";
 import { HeaderContact } from "@/molecules/HeaderContact/HeaderContact";
+import { PlatformButtons } from "@/molecules/PlatformButtons/PlatformButtons";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CtaDownload/>
         <PersonalSummary/>
         <HeaderContact/>
+        <PlatformButtons/>
       </main>
     </>
   );
