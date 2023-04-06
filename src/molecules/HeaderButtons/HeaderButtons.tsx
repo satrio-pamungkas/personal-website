@@ -1,5 +1,5 @@
 import { Button } from "../../atoms/Button/Button"
-import { useWidthSize } from "@/hooks/useWidthSize";
+import { useWidthSize } from "../../hooks/useWidthSize";
 
 export const HeaderButtons = () => {
   const [size] = useWidthSize("large");

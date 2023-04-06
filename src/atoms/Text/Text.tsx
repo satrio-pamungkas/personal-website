@@ -5,14 +5,16 @@ export const Text = ({
   textColor = "text-black",
   textSize = "text-sm",
   textAlign = "text-left",
-  children = ""
+  children = "",
+  underline = false
 }: IText) => {
 
   return (
     <p 
       className={`font-barlow ` + 
       `${textWeight} ` + `${textColor} ` +
-      `${textAlign} ` + `${textSize}`}
+      `${textAlign} ` + `${textSize} ` +
+      `${underline ? "underline underline-offset-8" : ""}`}
       data-testid="text"
     >
       {children}

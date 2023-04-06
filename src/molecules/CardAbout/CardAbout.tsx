@@ -2,11 +2,8 @@ import { Button } from "../../atoms/Button/Button";
 import Image from "next/image";
 import Illustration from "../../../public/card-illustration.png";
 import { Text } from "../../atoms/Text/Text";
-import { useWidthSize } from "../../hooks/useWidthSize";
 
 export const CardAbout = () => {
-  const [size] = useWidthSize("large");
-
   return (
     <div 
       className="bg-neutral-800 rounded-[25px] 
@@ -14,7 +11,8 @@ export const CardAbout = () => {
       data-testid="card-about"
     >
       <Image
-        className="rounded-r-[25px] right-0 h-96 sm:h-80" 
+        className="rounded-l-[25px] md:rounded-l-[0px] rounded-r-[25px] 
+          right-0 h-80" 
         src={Illustration} 
         alt="Card Illustration" 
       />
@@ -22,7 +20,7 @@ export const CardAbout = () => {
         absolute inset-y-0 left-0 w-full
         bg-gradient-to-r from-neutral-800 to-white/10"
       >
-        <div className="flex flex-col h-full md:w-1/2 lg:w-2/5 p-12 space-y-8">
+        <div className="flex flex-col h-full md:w-full xl:w-3/5 2xl:w-2/5 p-6 md:p-12 space-y-8">
           <Text
             textAlign="text-left"
             textColor="text-white"
@@ -41,7 +39,7 @@ export const CardAbout = () => {
           </Text>
           <div className="w-1/2 xl:w-1/3">
             <Button
-              size={size}
+              size="normal"
               styleColor="primary"
             >
               Read More

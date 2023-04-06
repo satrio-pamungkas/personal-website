@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Header } from "@/organisms/Header/Header";
 import { CtaDownload } from "@/organisms/CtaDownload/CtaDownload";
-import { CardAbout } from "@/molecules/CardAbout/CardAbout";
+import { PersonalSummary } from "@/organisms/PersonalSummary/PersonalSummary";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <Navbar/>
         <Header/>
         <CtaDownload/>
-        <CardAbout/>
+        <PersonalSummary/>
       </main>
     </>
   );

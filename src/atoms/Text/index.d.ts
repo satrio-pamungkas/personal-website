@@ -4,4 +4,5 @@ export interface IText {
   textSize?: string
   textAlign?: string
   textWeight?: string
+  underline?: boolean
 }

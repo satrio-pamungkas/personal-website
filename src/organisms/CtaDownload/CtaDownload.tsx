@@ -2,13 +2,13 @@ import { Title } from "../../atoms/Title/Title";
 import { Text } from "../../atoms/Text/Text";
 import { Button } from "../../atoms/Button/Button";
 import { FiDownload } from "react-icons/fi";
-import { useWidthSize } from "@/hooks/useWidthSize";
+import { useWidthSize } from "../../hooks/useWidthSize";
 
 export const CtaDownload = () => {
   const [size] = useWidthSize("large");
 
   return (
-    <section className="container mx-auto" data-testid="cta-download">
+    <section className="container mx-auto px-4 md:px-16" data-testid="cta-download">
       <div className="flex justify-center 
         bg-neutral-800 rounded-[25px] py-8 2xl:py-12 px-8 md:px-0">
         <div className="none md:block md:w-1/5"/>
