@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Header } from "@/organisms/Header/Header";
+import { CtaDownload } from "@/organisms/CtaDownload/CtaDownload";
+import { PersonalSummary } from "@/organisms/PersonalSummary/PersonalSummary";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <main className="bg-neutral-900">
         <Navbar/>
         <Header/>
+        <CtaDownload/>
+        <PersonalSummary/>
       </main>
     </>
   );

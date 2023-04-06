@@ -27,7 +27,7 @@ describe("HeaderTitle", () => {
   it("Renders child element correctly", () => {
     act(() => {styleRender(<HeaderTitle/>)})
     const component = screen.getByTestId("header-title");
-    const children = screen.getAllByTestId("hero-title");
+    const children = screen.getAllByTestId("title");
 
     children.forEach(element => {
       expect(component).toContainElement(element);

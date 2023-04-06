@@ -10,7 +10,7 @@ export const Title = ({
 
   return (
     <h1 
-      data-testid="hero-title" 
+      data-testid="title" 
       className={`font-barlow py-1 ` + 
       `${textWeight} ` + `${textColor} ` +
       `${textAlign} ` + `${textSize}`}

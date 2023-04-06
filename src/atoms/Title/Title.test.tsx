@@ -29,7 +29,7 @@ describe("Title", () => {
         <Title textWeight={textWeight}>{text}</Title>);
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveTextContent(text);
   })
@@ -41,7 +41,7 @@ describe("Title", () => {
       );
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveClass("font-bold");
   })
@@ -53,7 +53,7 @@ describe("Title", () => {
       );
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveClass("font-normal");
   })
@@ -67,7 +67,7 @@ describe("Title", () => {
       );
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveClass(textColor);
   })
@@ -85,7 +85,7 @@ describe("Title", () => {
       );
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveClass(textSize);
   })
@@ -102,7 +102,7 @@ describe("Title", () => {
       );
     })
 
-    const component = screen.getByTestId("hero-title");
+    const component = screen.getByTestId("title");
 
     expect(component).toHaveClass(textAlign);
   })

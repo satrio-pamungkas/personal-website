@@ -1,29 +1,14 @@
 import { Button } from "../../atoms/Button/Button"
-import { useState, useEffect } from "react";
+import { useWidthSize } from "../../hooks/useWidthSize";
 
 export const HeaderButtons = () => {
-  const [size, setSize] = useState<string>("large");
-
-  const handleResize = () => {
-    if (window.innerWidth < 576) {
-      setSize("normal");
-    } else {
-      setSize("large");
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    }
-  })
+  const [size] = useWidthSize("large");
 
   return (
     <div 
       data-testid="header-buttons" 
-      className="flex flex-row justify-between space-x-4"
+      className="flex flex-col md:flex-row justify-between 
+        md:space-x-4 space-y-4 md:space-y-0"
     >
       <Button
         size={size}
