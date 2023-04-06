@@ -5,8 +5,10 @@ import { Text } from "../../atoms/Text/Text";
 export const Incorporate = () => {
   return (
     <div
-      className="flex flex-row space-x-8"
-      data-testid="incorporate">
+      className="flex flex-col items-center md:items-stretch 
+        md:flex-row md:space-x-8 space-y-4 md:space-y-0"
+      data-testid="incorporate"
+    >
       <Image
         data-testid="image" 
         src={Logo} 
@@ -14,9 +16,9 @@ export const Incorporate = () => {
       />
       <div className="border-r-2 border-white"/>
       <Text
-        textAlign="text-left"
+        textAlign="text-center md:text-left"
         textColor="text-white"
-        textSize="text-lg"
+        textSize="text-md md:text-lg"
         textWeight="font-normal"
       >
         Please Note, if you are contact me to hire me as a freelance. Then, just contact my incorporate (Sahud Agency).

@@ -3,9 +3,7 @@ import { Navbar } from "@/organisms/Navbar/Navbar";
 import { Header } from "@/organisms/Header/Header";
 import { CtaDownload } from "@/organisms/CtaDownload/CtaDownload";
 import { PersonalSummary } from "@/organisms/PersonalSummary/PersonalSummary";
-import { HeaderContact } from "@/molecules/HeaderContact/HeaderContact";
-import { PlatformButtons } from "@/molecules/PlatformButtons/PlatformButtons";
-import { Incorporate } from "@/molecules/Incorporate/Incorporate";
+import { Contact } from "@/organisms/Contact/Contact";
 
 export default function Home() {
   return (
@@ -21,9 +19,7 @@ export default function Home() {
         <Header/>
         <CtaDownload/>
         <PersonalSummary/>
-        <HeaderContact/>
-        <PlatformButtons/>
-        <Incorporate/>
+        <Contact/>
       </main>
     </>
   );

@@ -7,7 +7,7 @@ export const HeaderContact = () => {
       <Title
         textAlign="text-center"
         textColor="text-white"
-        textSize="text-3xl"
+        textSize="text-xl md:text-3xl"
         textWeight="font-bold"
       >
         Several Ways to Reach Me
@@ -16,7 +16,7 @@ export const HeaderContact = () => {
         textAlign="text-center"
         textColor="text-white"
         textWeight="font-normal"
-        textSize="text-lg"
+        textSize="text-md md:text-lg"
       >
         You can reach me on these platforms, feel free to chat.
       </Text>
