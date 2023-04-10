@@ -11,6 +11,9 @@ export const PlatformButtons = () => {
         <ButtonIcon
           key={item.id}
           icon={item.icon}
+          onClick={() => {
+            window.open(item.link);
+          }}
         />
       ))}
     </div>

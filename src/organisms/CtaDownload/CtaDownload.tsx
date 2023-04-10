@@ -36,6 +36,9 @@ export const CtaDownload = () => {
               icon={<FiDownload/>}
               size={size}
               styleColor="secondary"
+              onClick={() => {
+                window.open(resumeLink) 
+              }}
             >
               Download Resume
             </Button>
@@ -43,6 +46,9 @@ export const CtaDownload = () => {
               icon={<FiDownload/>}
               size={size}
               styleColor="secondary"
+              onClick={() => {
+                window.open(portfolioLink)
+              }}
             >
               Download Portfolio
             </Button>
@@ -53,3 +59,6 @@ export const CtaDownload = () => {
     </section>
   )
 }
+
+const resumeLink = "https://drive.google.com/drive/folders/15R3Fzu_cM7Xa6ix1EhiZhXwuZlySCCA8?usp=share_link";
+const portfolioLink = "https://drive.google.com/drive/folders/1Uswpr7iYDRe_MhxtX4fnOQCvJ3I9xnjr?usp=share_link";
