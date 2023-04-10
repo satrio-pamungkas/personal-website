@@ -6,22 +6,22 @@ import { HiOutlineMail } from "react-icons/hi";
 export const platformLists: IPlatformList[] = [
   {
     id: 1,
-    link: "",
+    link: "https://id.linkedin.com/in/muhammadraihanspp",
     icon: <FaLinkedin color="white" className="text-xl md:text-3xl" />
   },
   {
     id: 2,
-    link: "",
+    link: "https://www.instagram.com/muhammadraihanspp/",
     icon: <FaInstagram color="white" className="text-xl md:text-3xl" />
   },
   {
     id: 3,
-    link: "",
+    link: "mailto:muhammadraihanspp@gmail.com",
     icon: <HiOutlineMail color="white" className="text-xl md:text-3xl" />
   },
   {
     id: 4,
-    link: "",
+    link: "https://github.com/satrio-pamungkas",
     icon: <FaGithub color="white" className="text-xl md:text-3xl" />
   },
   {

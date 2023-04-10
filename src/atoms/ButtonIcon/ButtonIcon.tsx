@@ -6,6 +6,7 @@ export const ButtonIcon = (props: IButtonIcon) => {
       className="p-4 rounded-lg bg-neutral-600 
         hover:bg-neutral-800"
       data-testid="button-icon"
+      onClick={props.onClick}
     >
       {props.icon}
     </button>
