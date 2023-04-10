@@ -13,12 +13,20 @@ export const HeaderButtons = () => {
       <Button
         size={size}
         styleColor="primary"
+        onClick={() => {
+          const element = document.getElementById("about");
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }}
       >
         Learn More
       </Button>
       <Button
         size={size}
         styleColor="primary"
+        onClick={() => {
+          const element = document.getElementById("contact");
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }}
       >
         Want To Reach Me ?
       </Button>

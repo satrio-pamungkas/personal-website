@@ -3,7 +3,8 @@ import { Text } from "../../atoms/Text/Text"
 
 export const PersonalSummary = () => {
   return (
-    <section 
+    <section
+      id="about" 
       className="container mx-auto py-8 2xl:py-12 px-4 md:px-16"
       data-testid="personal-summary"
     >

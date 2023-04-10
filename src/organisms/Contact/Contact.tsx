@@ -4,7 +4,8 @@ import { PlatformButtons } from "../../molecules/PlatformButtons/PlatformButtons
 
 export const Contact = () => {
   return (
-    <section 
+    <section
+      id="contact" 
       className="container mx-auto px-4 md:px-16 
         py-8 md:py-32 flex flex-row" 
       data-testid="contact"
